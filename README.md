@@ -2,7 +2,7 @@
 
 なんか面白そうな言語だったのでテスト。自分が見返す用。
 
-このリポジトリを見ているあなたは黙って公式のexample見たほうがいいかも。
+このリポジトリを見ているあなたは黙って公式のexample見ることをおすすめする。
 
 ## TODO
 
@@ -17,6 +17,11 @@
   172 |         init_fn: gg_init
   173 |         //keydown_fn: window_key_down
 ```
+
+## MEMO
+
+[vlangコードを.so~(ry](https://qiita.com/syoyo/items/52d6b720393a72b3b5d9)
+Pythonで呼べるっぽい。面白そう。
 
 
 # LICENSE
