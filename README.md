@@ -6,17 +6,8 @@
 
 ## TODO
 
-自分で修正しないといけないパティーン？
-
-```
-.vmodules/ui/window.v:171:42: error: unknown function: gg.system_font_path
-  169 |         event_fn: on_event
-  170 |         user_data: window
-  171 |         font_path: if cfg.font_path == '' { gg.system_font_path() } else { cfg.font_path }
-      |                                                ~~~~~~~~~~~~~~~~~~
-  172 |         init_fn: gg_init
-  173 |         //keydown_fn: window_key_down
-```
+- [ ] 文字が表示されない。`"SFNS-bold.ttf"` がないって言われる。
+- [ ] Pythonで呼んでみる
 
 ## MEMO
 

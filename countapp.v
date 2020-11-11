@@ -2,8 +2,8 @@ import ui
 import os
 
 const (
-	win_width  = 208
-	win_height = 46
+	win_width  = 400
+	win_height = 100
 )
 
 struct App {
@@ -26,17 +26,20 @@ fn main() {
 			stretch: true
 			margin: ui.MarginConfig{5, 5, 5, 5}
 		}, [
-			ui.textbox({
-				max_len: 20
-				read_only: true
-				is_numeric: true
-				text: &app.counter
-			}),
+			//ui.textbox({
+			//	max_len: 20
+			//	read_only: true
+			//	is_numeric: true
+			//	text: &app.counter
+			//}),
+            ui.label({
+                text: "hey"
+            }),
 			ui.button({
-				width: 24
-				height: 24
-				icon_path: os.resource_abs_path('plus.png')
-				text: 'Alt'
+				width: 50
+				height: 75
+				//icon_path: os.resource_abs_path('plus.png')
+				text: 'press me'
 				onclick: btn_count_click
 			}),
 		]),
@@ -46,4 +49,5 @@ fn main() {
 
 fn btn_count_click(mut app App, btn &ui.Button) {
 	app.counter = (app.counter.int() + 1).str()
+    println("clicked! $app.counter")
 }
