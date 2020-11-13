@@ -26,19 +26,19 @@ this repository is under the WTFPL.
 
 # 解決済み
 
-## 文字が表示されない
+## v-uiで文字が表示されない
 
-適当なフォント.ttfを同じディレクトリに配置
 
 ui.windowに
 
 ```v
-font_path: os.resource_abs_path('<FontName>.ttf')
+font_path: <適当なフォントパス>.ttf'
 ```
 
 を追加。
 
-なお絶対パスで指定できない模様。誰かプルリクだして（）
+
+同じディレクトリに配置したなら os.resource_abs_path("<name>.ttf") を。
 
 
 
