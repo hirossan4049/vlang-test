@@ -1,4 +1,5 @@
 import ui
+import gx
 import time
 
 const (
@@ -42,6 +43,7 @@ fn main() {
 		height: win_height
 		title: 'Timer'
 		state: app
+		bg_color: gx.rgb(233,233,233)
 	}, [
 		ui.column({
 			stretch: true
@@ -78,6 +80,7 @@ fn main() {
 			app.progress_bar,
 		]),
 	])
+	//window.bg_color = gx.rgb(0,0,0)
 	app.window = window
 	go app.timer()
 	ui.run(window)
