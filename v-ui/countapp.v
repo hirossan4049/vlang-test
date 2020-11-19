@@ -1,5 +1,7 @@
 import ui
-import os
+//import os
+import gx
+
 
 const (
 	win_width  = 400
@@ -19,7 +21,11 @@ fn main() {
 		height: win_height
 		title: 'Counter'
 		state: app
+		bg_color: gx.white
 	}, [
+		ui.label({
+			text: "hahha"
+		}),
 		ui.row({
 			alignment: .center
 			spacing: 10
@@ -51,14 +57,15 @@ fn main() {
 				text: &app.counter
 			}),
 			ui.button({
-				width: 50
-				height: 75
+				width: 300
+				height: 100
 				//icon_path: os.resource_abs_path('plus.png')
 				text: 'press me'
 				onclick: btn_count_click
 			}),
 		]),
 	])
+	//println(app.window.children[0].text)
 	ui.run(app.window)
 }
 
