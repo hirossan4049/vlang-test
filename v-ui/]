@@ -66,13 +66,13 @@ fn canvas_draw(gg &gg.Context, app &App) {
 	mut xx:= f32(0)
 	mut yy:= f32(0)
 
-	r := 17
+	r := 10
 	x := 100 + r
 	y := 100 + r
-	width := 160   - int(any_float(r)*2.75)
-	height := 75  - int(any_float(r)*2.75)
+	width := 200 + x - r*3
+	height := 200 + y - r*3
 	segments := f32(30)
-                           
+
 	if r > x - r + int(segments) || r > y - r + int(segments){
 		gg.draw_circle_with_segments(x,y,r,30,gx.blue)
 		return
@@ -92,8 +92,8 @@ fn canvas_draw(gg &gg.Context, app &App) {
 	sgl.v2f(x+width, yy + y)
 
 	// right top 6
-	rx := x+xx+width-r/3
-	ry := yy + y + r
+	rx := x+xx+width-r/2 + 6
+	ry := yy + y + r - 3
 	for i in 24..30{
 		theta = 2 * f32(math.pi) * f32(i) / segments
 		xx = r * math.cosf(theta)
@@ -117,7 +117,7 @@ fn canvas_draw(gg &gg.Context, app &App) {
 	// 7
 	lx := x
 	ly := ry + height - r/ 3
-	for i in 39..45{
+	for i in 39..46{
 		theta = 2 * f32(math.pi) * f32(i) / segments
 		xx = r * math.cosf(theta)
 		yy = r * math.sinf(theta)
