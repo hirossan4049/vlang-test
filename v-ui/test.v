@@ -50,20 +50,8 @@ fn canvas_draw(gg &gg.Context,mut app &App) {
 	y := f32(100)
 	w := f32(200)
 	h := f32(200)
-	radius := f32(5)
+	radius := f32(15)
 	sgl.begin_triangle_strip()
-	//for i in 0..segments{
-	//	theta = 2.0 * f32(math.pi) * f32(i) / f32(segments)
-	//	xx = r * math.cosf(theta)
-	//	yy = r * math.sinf(theta)
-	//	sgl.v2f(xx + x, yy + y)
-	//	sgl.v2f(x, y)
-	//	if i == 64/4{
-	//		break
-	//	}
-	//}
-	//sgl.end()
-	//gg.draw_rect(100,100,200,200,gx.red)
 
 	mut theta := f32(0)
 	mut xx := f32(0)
@@ -122,7 +110,9 @@ fn canvas_draw(gg &gg.Context,mut app &App) {
 	sgl.v2f(lx + xx, ly)
 	sgl.v2f(lx, ly)
 	sgl.end()
-	gg.draw_rect(lx/gg.scale,ly/gg.scale,width-r,height-r,gx.green)
+	gg.draw_rect(lx/gg.scale,ly/gg.scale,rbx-lx,rby-ly,gx.red)
+
+	
 
 }
 
