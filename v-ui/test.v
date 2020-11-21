@@ -43,14 +43,14 @@ fn btn_count_click(mut app App, btn &ui.Button) {
 
 [live]
 fn canvas_draw(gg &gg.Context,mut app &App) {
-	//gg.draw_empty_rounded_rect(2*i,2*i,100-i,100-i,i,gx.black)
+	gg.draw_empty_rounded_rect(100,100,35,15,5,gx.rgb(98,0,238))
 	//gg.draw_empty_rect(i,i,100-i,100-i,gx.black)
- 	sgl.c4b(0,255,0,255)
-	x := f32(100)
+ 	sgl.c4b(98,0,238,255)
+	x := f32(200)
 	y := f32(100)
-	w := f32(30)
-	h := f32(16)
-	radius := f32(3)
+	w := f32(35)
+	h := f32(15)
+	radius := f32(5)
 	sgl.begin_triangle_strip()
 
 	mut theta := f32(0)
@@ -117,8 +117,18 @@ fn canvas_draw(gg &gg.Context,mut app &App) {
 	sgl.v2f(rbx,rby)
 	sgl.v2f(lbx,lby)
 	sgl.end()
-	//gg.draw_rect(lx/gg.scale,ly/gg.scale,rbx-lx,rby-ly,gx.red)
 
+	btn_text_cfg := gx.TextCfg{
+		color: gx.rgb(255, 255, 255)
+		align: gx.align_left
+	}
+	tw, th := gg.text_size("押して")
+	w2 := tw / 2
+	h2 := th / 2
+	bcx := int(x + width / 2)
+	bcy := int(y + height / 2)
+
+    gg.draw_text(int(bcx - w2), int(bcy - h2), "押して", btn_text_cfg)
 	
 
 }
