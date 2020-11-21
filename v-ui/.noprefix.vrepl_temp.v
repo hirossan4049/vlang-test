@@ -4,9 +4,10 @@ import time
 
 import math
 
-for i in 19..27{
+a := 3
+b := 10
+for i in a..b{
 
 println(i)
-
 }
 
