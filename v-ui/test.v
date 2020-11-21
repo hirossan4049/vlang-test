@@ -109,8 +109,16 @@ fn canvas_draw(gg &gg.Context,mut app &App) {
 	}
 	sgl.v2f(lx + xx, ly)
 	sgl.v2f(lx, ly)
+	sgl.end() 
+
+	sgl.c4b(255,0,0,255)
+	sgl.begin_quads()
+	sgl.v2f(lx,ly)
+	sgl.v2f(rx,ry)
+	sgl.v2f(rbx,rby)
+	sgl.v2f(lbx,lby)
 	sgl.end()
-	gg.draw_rect(lx/gg.scale,ly/gg.scale,rbx-lx,rby-ly,gx.red)
+	//gg.draw_rect(lx/gg.scale,ly/gg.scale,rbx-lx,rby-ly,gx.red)
 
 	
 
