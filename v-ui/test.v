@@ -48,9 +48,9 @@ fn canvas_draw(gg &gg.Context,mut app &App) {
  	sgl.c4b(0,255,0,255)
 	x := f32(100)
 	y := f32(100)
-	w := f32(200)
-	h := f32(200)
-	radius := f32(15)
+	w := f32(30)
+	h := f32(16)
+	radius := f32(3)
 	sgl.begin_triangle_strip()
 
 	mut theta := f32(0)
@@ -111,7 +111,6 @@ fn canvas_draw(gg &gg.Context,mut app &App) {
 	sgl.v2f(lx, ly)
 	sgl.end() 
 
-	sgl.c4b(255,0,0,255)
 	sgl.begin_quads()
 	sgl.v2f(lx,ly)
 	sgl.v2f(rx,ry)
